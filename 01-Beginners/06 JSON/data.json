@@ -1,0 +1,11 @@
+{
+    "firstName": "Ujang",
+    "lastName": "Cukurukuk",
+    "age": 22,
+    "hobbies": ["Basketball", "Programming", "Music"],
+    "address": {
+        "province": "East Java",
+        "city": "Bogor",
+        "postal code": 9999
+    }
+}
