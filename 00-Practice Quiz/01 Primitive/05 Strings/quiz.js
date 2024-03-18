@@ -6,7 +6,7 @@ console.log(fullName);
 
 // 2. Append: Add the string ", PhD" to an existing variable `title`, initially having the value "Lecturer".
 let title = 'Lecturer';
-title += ' PHD'
+title += ' PHD';
 console.log(title);
 
 // 3. Length: Determine the length (number of characters) of the string "JavaScript is a powerful programming language!".
@@ -28,7 +28,7 @@ console.log(splitsJoin.join(' '));
 console.log(splitsJoin.join(' ').split(' ').join(' '));
 
 // 7. Includes: Check if the string "Today is a sunny day" includes the word "sunny".
-let inc = 'Today is a sunny day'
+let inc = 'Today is a sunny day';
 console.log(inc.includes('sunny'));
 
 // 8. Trim: Remove extra spaces at the beginning and end of the string "'   Hello, World!   '".
@@ -45,5 +45,5 @@ let result = [partOne, partTwo, partThree].join('-');
 console.log(result);
 
 // 10. Combination of Manipulations: Create a variable `sentence` with the value "This is an example sentence." Convert the sentence to lowercase, slice it into two parts from index 8, then join them back together with the word "great!" inserted in the middle.
-let sentence = 'This is an example sentence'
+let sentence = 'This is an example sentence';
 console.log(sentence.toLowerCase().slice(8));
