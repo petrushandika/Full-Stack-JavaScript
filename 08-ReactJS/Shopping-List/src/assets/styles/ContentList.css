@@ -1,0 +1,40 @@
+.contentList {
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.button {
+    display: flex;
+    gap: 1rem;
+}
+
+.button button {
+    width: 4rem;
+    height: 2rem;
+    border-radius: .5rem;
+}
+
+.done {
+    color: green;
+    border: 2px solid green;
+}
+
+.done:hover {
+    color: #fff;
+    background-color: green;
+}
+
+.delete {
+    color: red;
+    border: 2px solid red;
+}
+
+.delete:hover {
+    color: #fff;
+    background-color: red;
+}

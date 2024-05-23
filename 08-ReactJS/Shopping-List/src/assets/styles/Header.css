@@ -1,0 +1,12 @@
+.header {
+  width: 100%;
+  padding: .5rem 0;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  position: fixed;
+  top: 0;
+}
+
+.header h1 {
+  font-weight: 600;
+}
