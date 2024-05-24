@@ -18,7 +18,7 @@ export default function Sidebar() {
         </NavLink>
       </ListItem>
       <ListItem>
-        <NavLink to="/">
+        <NavLink to="/profile">
           <ListIcon as={AtSignIcon} color="white" />
           Profile
         </NavLink>
