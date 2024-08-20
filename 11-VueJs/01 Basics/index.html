@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Learning Vue</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Counter Age -->
+      <div>
+        <p>{{title}} - {{author}} - {{age}}</p>
+        <button v-on:click="age++">Increase Age</button>
+        <button v-on:click="age--">Decrement Age</button>
+        <div @click="changeTitle('Oathbringer')">Change Title</div>
+      </div>
+
+      <!-- Show Title -->
+      <div v-if="showTitle">
+        <p>{{title}} - {{author}} - {{age}}</p>
+      </div>
+      <button @click="toggleShowTitle">
+        <span v-if="showTitle">Hide Title</span>
+        <span v-else="!showTitle">Show Title</span>
+      </button>
+      <div v-show="showTitle">Currently showing title</div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
