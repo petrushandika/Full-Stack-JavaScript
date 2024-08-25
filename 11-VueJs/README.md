@@ -223,7 +223,7 @@ const sum = useMemo(() => a + b, [a, b]);
 
 **Contoh:**
 
-```vue
+```javascript
 <template>
   <div>
     <slot></slot>
@@ -267,57 +267,66 @@ function ParentComponent({ children }) {
 }
 ```
 
-    ### 13. **Transition dan Animation**
+### 13. **Transition dan Animation**
 
-    **Vue.js:**
+**Vue.js:**
 
-    **Transition dan Animation:** Vue memiliki dukungan built-in untuk transisi dan animasi melalui komponen `<transition>` dan `<transition-group>`, yang memudahkan penerapan animasi pada komponen atau elemen DOM.
+**Transition dan Animation:** Vue memiliki dukungan built-in untuk transisi dan animasi melalui komponen `<transition>` dan `<transition-group>`, yang memudahkan penerapan animasi pada komponen atau elemen DOM.
 
-    **Contoh:**
+**Contoh:**
 
-    ```vue
-    <transition name="fade">
-    <div v-if="show">Content goes here</div>
-    </transition>
-    ```
+```javascript
+<transition name="fade">
+  <div v-if="show">Content goes here</div>
+</transition>
+```
 
-    **React:**
+**React:**
 
-    **Animation Libraries:** React biasanya menggunakan library eksternal seperti `React Transition Group` atau `Framer Motion` untuk mengelola animasi.
+**Animation Libraries:** React biasanya menggunakan library
+eksternal seperti `React Transition Group` atau `Framer Motion` untuk mengelola
+animasi.
 
-    **Contoh:**
+**Contoh:**
 
-    ```javascript
-    import { CSSTransition } from "react-transition-group";
+```javascript
+import { CSSTransition } from "react-transition-group";
 
-    <CSSTransition
-    in={show}
-    timeout={300}
-    classNames="fade"
-    >
-    <div>Content goes here</div>
-    </CSSTransition>;
-    ```
+<CSSTransition
+  in="{show}"
+  timeout="{300}"
+  classNames="fade"
+>
+  <div>Content goes here</div>
+</CSSTransition>;
+```
 
-    ### 14. **Plugins vs. HOC**
+### 14. **Plugins vs. HOC** **Vue.js:**
 
-    **Vue.js:**
+**Plugins:**
 
-    **Plugins:** Vue menyediakan sistem plugin untuk menambahkan fitur global ke aplikasi Vue. Plugin dapat mendaftarkan komponen global, menambahkan metode instance, dan sebagainya.
+Vue menyediakansistem plugin untuk menambahkan fitur global ke aplikasi Vue. Plugin dapat
+mendaftarkan komponen global, menambahkan metode instance, dan sebagainya.
 
-    **Contoh:** Vue Router dan Vuex adalah contoh plugin yang digunakan untuk routing dan manajemen state global.
+**Contoh:**
 
-    **React:**
+Vue Router dan Vuex adalah contoh plugin yang digunakan untuk
+routing dan manajemen state global.
 
-    **Higher-Order Components (HOC):** React sering menggunakan HOC, yaitu fungsi yang mengambil komponen dan mengembalikan komponen baru dengan kemampuan tambahan. HOC digunakan untuk mengelola concerns seperti routing, manajemen state, dan banyak lagi.
+**React:**
 
-    **Contoh:**
+**Higher-Order Components(HOC):**
 
-    ```javascript
-    function withLogger(WrappedComponent) {
-    return function (props) {
-        console.log("Logging props", props);
-        return <WrappedComponent {...props} />;
-    };
-    }
-    ```
+React sering menggunakan HOC, yaitu fungsi yang mengambil komponen dan
+mengembalikan komponen baru dengan kemampuan tambahan. HOC digunakan untuk
+mengelola concerns seperti routing, manajemen state, dan banyak lagi.
+
+**Contoh:**
+
+```javascript
+function withLogger(WrappedComponent) { return
+function (props) { console.log("Logging props", props); return
+<WrappedComponent {...props} />
+; }; } `
+
+```
