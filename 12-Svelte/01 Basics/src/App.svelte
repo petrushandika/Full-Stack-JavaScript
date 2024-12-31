@@ -16,13 +16,33 @@
 	const handleInput = (e) => {
 		colour = e.target.value;
 	}
+
+	let people = [
+		{name: 'Petrus', colour: 'Black', age: 22, id: 1},
+		{name: 'Mutiara', colour: 'Orange', age: 18, id: 2},
+		{name: 'Isah', colour: 'Pink', age: 20, id: 3},
+	]
 </script>
 
 <main>
-	<p>{fullName} - {colour} Belt</p>
-	<input type="text" bind:value={firstName}>
-	<input type="text" bind:value={lastName}>
-	<input type="text" bind:value={colour}>
+	<!-- User Input and Data Binding -->
+	<div>
+		<p>{fullName} - {colour} Belt</p>
+		<input type="text" bind:value={firstName}>
+		<input type="text" bind:value={lastName}>
+		<input type="text" bind:value={colour}>
+	</div>
+
+	<!-- Loop -->
+	{#each people as person (person.id)}
+		<div>
+			<h3>{person.name}</h3>
+			<p>{person.age} Years Old, {person.colour} Belt.</p>
+		</div>
+	{:else}
+		<p>There are no people to show...</p>
+	{/each}
+
 </main>
 
 <style>
