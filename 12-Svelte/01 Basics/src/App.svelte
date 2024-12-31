@@ -22,8 +22,18 @@
 	const handleClick = (id) => {
 		people = people.filter((person) => person.id != id)
 	}
-	
+
+	let num = 3;
 </script>
+
+<!-- Conditionals -->
+{#if num > 20}
+	<p>Greater Than 20</p>
+{:else if num > 5}
+	<p>Greater Than 5</p>
+{:else}
+	<p>Not Greater Than 5</p>
+{/if}
 
 <main>
 	<!-- User Input and Data Binding -->
@@ -38,6 +48,9 @@
 	{#each people as person (person.id)}
 		<div>
 			<h3>{person.name}</h3>
+			{#if person.colour === 'Black'}
+				<p><strong>FULLSTACK JAVASCRIPT</strong></p>
+			{/if}
 			<p>{person.age} Years Old, {person.colour} Belt.</p>
 			<button on:click={(e) => {handleClick(person.id)}}>Delete</button>
 		</div>
