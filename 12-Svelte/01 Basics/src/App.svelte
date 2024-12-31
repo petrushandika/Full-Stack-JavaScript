@@ -9,10 +9,6 @@
 		console.log(fullName);
 	}
 
-	const handleClick = () => {
-		colour = 'Orange';
-	};
-
 	const handleInput = (e) => {
 		colour = e.target.value;
 	}
@@ -22,6 +18,11 @@
 		{name: 'Mutiara', colour: 'Orange', age: 18, id: 2},
 		{name: 'Isah', colour: 'Pink', age: 20, id: 3},
 	]
+
+	const handleClick = (id) => {
+		people = people.filter((person) => person.id != id)
+	}
+	
 </script>
 
 <main>
@@ -38,6 +39,7 @@
 		<div>
 			<h3>{person.name}</h3>
 			<p>{person.age} Years Old, {person.colour} Belt.</p>
+			<button on:click={(e) => {handleClick(person.id)}}>Delete</button>
 		</div>
 	{:else}
 		<p>There are no people to show...</p>
