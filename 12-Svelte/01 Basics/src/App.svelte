@@ -1,15 +1,21 @@
 <script>
 	let name = 'Petrus';
-	let colour = 'black';
+	let colour = 'Black';
 	const handleClick = () => {
-		colour = 'orange';
+		colour = 'Orange';
 	};
+
+	const handleInput = (e) => {
+		colour = e.target.value;
+	}
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
-	<p>{colour} belt</p>
+	<p style="color: {colour}">{colour} Belt</p>
 	<button on:click={handleClick}>Update</button>
+	<!-- <input type="text" on:input={handleInput} value={colour}> -->
+	 <input type="text" bind:value={colour}>
 </main>
 
 <style>
